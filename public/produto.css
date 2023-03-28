@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    height: 60px;
+    background-color: #18171d;
+    border-bottom: 2px solid #e3762b;
+    color: #CFD8DC;
+  }
+.d-flex{
+    margin:10px;
+    float: right;
+    width: 200px;
+}
+.logoImg{
+    height: 80px;
+    width: 80px;
+}
+.nome{
+    font: 40px arial white;
+}
+.logo{
+    text-decoration: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin-left: 600px;
+}
+.btnReturn{
+    margin: 10px;
+    margin-left: 20px;
+    height: 30px;
+    width: 30px;
+    
+}
+.ri-reply-line{
+    color: #e3762b;
+    border: #e3762b;
+}
+.produtoImg{
+    width: 600px;
+    max-height: 510px;
+    float: left;
+    margin: 20px;
+    margin-left: 40px;
+    border: 2px solid #e3762b;
+    border-radius: 20px;
+}
+.tytle{
+    text-align: center;
+}
+.carrinho{
+    color:#e3762b;
+}
+.maisProd{
+    margin-top: 70px;
+    height: 50px;
+    width: 100%;
+    background-color: #703f2a;
+    border: 2px solid #38221f;
+    color:#CFD8DC;
+    text-align: center;
+}
+
+.carrinho{
+    color:#e3762b;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cards_item {
+    float: left;
+    padding: 0.8rem;
+    width: 22%;
+    margin-left: 9%;
+    height: 12%;
+    transition: 0.5s;
+    color: #e3762b;
+  }
+  
+  .cards_item:hover {
+    transform: scale(1.1);
+    z-index: 2;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .card_content {
+    padding: 0.8rem;
+    background: #CFD8DC;
+  }
+  
+  .card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+  .card_btn{
+    color: #e3762b;
+  }
+  .card_text {
+    color: #e3762b;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+  }
+  
