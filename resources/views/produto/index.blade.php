@@ -60,7 +60,7 @@
         -->
 
             <div class="descProd">
-                <h1 class="tytle">{{$produto->PRODUTO_NOME}}</h1>
+                <h1 class="tytle">{{$produtos->PRODUTO_NOME}}</h1>
                 <br>
                 <h2>Descrição: </h2>
                 <p>Violino antigo, que pelos padrões de construção, estimamos ter sido construído em oficina ou fábrica Alemã, na primeira metade do século XX. Violino em bom estado de conservação, construído em Acero e Abeto e finalizado com verniz natural. Indicado para estudantes intermediários e avançados ou violinistas que desejam um instrumento antigo com preço mais acessível.</p>

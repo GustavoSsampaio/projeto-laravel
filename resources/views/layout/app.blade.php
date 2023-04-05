@@ -12,6 +12,7 @@
     <!--Link das Fontes.css-->
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="">
   
     <title>Echo</title>
 </head>
@@ -23,7 +24,7 @@
           <span></span>
         </label>
         <ul class="menu__box">
-          <li><a class="menu__item" href="produto.html">Instrumentos</a></li>
+          <li><a class="menu__item" href="http://127.0.0.1:8000/produto/1">Instrumentos</a></li>
           <li><a class="menu__item" href="#">Som</a></li>
           <li><a class="menu__item" href="#">itens</a></li>
           <li><a class="menu__item" href="#">Sobre Nós</a></li>
@@ -31,8 +32,8 @@
         </ul>
       </div>
 
-        <a href="#" class="logo">
-           <img src="../imagens/Logo_Echo-removebg-preview_-_Editado-removebg-preview.png" class="logoImg">
+        <a href="http://127.0.0.1:8000/" class="logo">
+           <img src="/imagens/Logo.png" class="logoImg">
            <span>Echo</span>
         </a>
         
@@ -46,9 +47,13 @@
           <button class="btn btn-outline-success" type="submit"><i class="ri-search-fill"></i></button>
         </form>
     </header>
+
+    <main>
+  @yield('main')
+    </main>
         
     <footer>
-
+      
     </footer>
     <script type="text/JavaScript" src="/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

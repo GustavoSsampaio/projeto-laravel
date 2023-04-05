@@ -9,4 +9,4 @@ Route::get('/', function () {
 });
 
 Route:: get('/produto', [ProdutoController::class, 'index']);
-Route:: get('/produto/{produto}', [ProdutoController::class, 'show']);
+Route:: get('/produto/{id}', [ProdutoController::class, 'show']);

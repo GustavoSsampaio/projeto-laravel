@@ -1,14 +1,17 @@
 <!-- Este é o nosso main Produto -->
-   @extends('layout.app')
-   @section('main')
-        <section>
-            <div class="produtoImg">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
+@extends('layout.app')
+@section('main')
+<!--Carrosel de imagens do produto-->
+<link rel="stylesheet" type="text/css" href="/css/produto.css">
+  <main>
+    <section>
+      <div class="produtoImg">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
                     <img src="https://hpgmusical.com/media/catalog/product/cache/788f13bf9e20f9323792a5c317a62683/v/i/violino-alemao-antigo-n203-_0_.jpg" class="d-block w-100" id="itemImg" alt="..." width="600px" height="500px" style="border-radius:20px;">
-                  </div>
-                  <div class="carousel-item">
+                </div>
+                <div class="carousel-item">
                     <img src="https://hpgmusical.com/media/catalog/product/cache/788f13bf9e20f9323792a5c317a62683/v/i/violino-alemao-antigo-n203-_01_.jpg" class="d-block w-100" id="itemImg" alt="..." width="600px" height="500px" style="border-radius:20px;">
                   </div>
                   <div class="carousel-item">
@@ -17,7 +20,7 @@
                   <div class="carousel-item">
                     <img src="https://hpgmusical.com/media/catalog/product/cache/788f13bf9e20f9323792a5c317a62683/v/i/violino-alemao-antigo-n203-_05_.jpg" class="d-block w-100" alt="..." width="600px" height="500px" style="border-radius:20px;">
                   </div>
-                </div>
+              </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -26,8 +29,8 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
-              </div>
-            </div>
+          </div>
+      </div>
 
 <!--
         <div class="miniCarousel">
@@ -37,17 +40,15 @@
         -->
 
             <div class="descProd">
-                <h1 class="tytle">{{$produto->PRODUTO_NOME}}</h1>
+                <h1 class="tytle">Violino Yamaha</h1>
                 <br>
                 <h2>Descrição: </h2>
-                <p>{{$produto->Categoria->CATEGORIA_DESC}}</p>
+                <p>Violino antigo, que pelos padrões de construção, estimamos ter sido construído em oficina ou fábrica Alemã, na primeira metade do século XX. Violino em bom estado de conservação, construído em Acero e Abeto e finalizado com verniz natural. Indicado para estudantes intermediários e avançados ou violinistas que desejam um instrumento antigo com preço mais acessível.</p>
                 <h2>Preço: </h2>
-                <p>R${{$produto->PRODUTO_PRECO}}</p>
+                <p>R$1000,00</p>
                 <h2>Desconto: </h2>
-                <p>R${{$produto->PRODUTO_DESCONTO}}</p>
-                <h2>Total</h2>
-                <p>{{$produto->PRODUTO_PRECO}} - {{$produto->PRODUTO_DESCONTO}}</p>
-
+                <p>R$20,00</p>
+                <p>Quantidade:</p>
                 <input type="number" name="qty" id="qty" maxlength="12" value="1" title="Qtd" class="input-text qty" data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}">
                 <br>
                 <br>
@@ -56,17 +57,14 @@
             </div>
         </sectio>
         <section class="maisProd">
-            <h1 class="um">Mais Produtos !</h1>
+            <h1 class="um">Mais Produtos</h1>
         
 
         <br><br><br><br>
         <ul class="cards">
           <li class="cards_item">
             <div class="card">
-              <div class="card_image">
-              @foreach($produto->ProdutoImagem as $imagem)  
-              <img class="w-50" src="{{$imagem->IMAGEM_URL}}">
-              @endforeach
+              <div class="card_image"><img class="w-50" src="../imagens/510681.PNG">
                 <div class="card_content">
                     <h2 class="card_title">Guitarra Yamaha</h2>
                 <p class="card_text">guitarra stratocaster para intermediarios </p>
@@ -75,10 +73,7 @@
           </li>
           <li class="cards_item">
             <div class="card">
-              <div class="card_image">
-              @foreach($produto->ProdutoImagem as $imagem)  
-              <img class="w-50" src="{{$imagem->IMAGEM_URL}}">
-              @endforeach
+              <div class="card_image"><img class="w-50" src="../imagens/guitarraPreta.jpg"></div>
               <div class="card_content">
                 <h2 class="card_title">Guitarra Yamaha</h2>
                 <p class="card_text">guitarra boa para quem está começando com o instrumento </p>
@@ -88,10 +83,7 @@
           </li>
           <li class="cards_item">
             <div class="card">
-              <div class="card_image">
-              @foreach($produto->ProdutoImagem as $imagem)  
-              <img class="w-50" src="{{$imagem->IMAGEM_URL}}">
-              @endforeach</div>
+              <div class="card_image"><img class="w-75" src="../imagens/violao-acustico-michael-antares-vm19e_241b.png"></div>
               <div class="card_content">
                 <h2 class="card_title">Arraial do Cabo</h2>
                 <p class="card_text">Rio de Janeiro</p>
@@ -99,7 +91,8 @@
               </div>
             </div>
           </li>
-        </section>
+  </section>
+</main>
    @endsection
     
 
