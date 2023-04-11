@@ -13,7 +13,7 @@
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="">
-  
+
     <title>Echo</title>
 </head>
 <body>
@@ -36,27 +36,32 @@
            <img src="/imagens/Logo.png" class="logoImg">
            <span>Echo</span>
         </a>
-        
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit"><i class="ri-search-fill"></i></button>
+        </form>
         <div class="main">
             <a href="#" class="user"><i class="ri-user-fill"></i>Sing In</a>
             <a href="#">Registrar</a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit"><i class="ri-search-fill"></i></button>
-        </form>
     </header>
 
     <main>
   @yield('main')
     </main>
-        
-    <footer>
-      
+
+    <footer class="foot">
+            <p>Contatos</p>
+                <ul>
+                    <li><i class="ri-whatsapp-fill"></i> (11)93271-2274</li>
+                    <li><i class="ri-instagram-line"></i> @Echo_Instrumentos</li>
+                    <li><i class="ri-map-pin-line"></i> Rua José Bonifacio - Jd.Mirante</li>
+                </ul>
     </footer>
+</body>
     <script type="text/JavaScript" src="/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
 </html>
-        
+

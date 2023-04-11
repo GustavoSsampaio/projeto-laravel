@@ -14,8 +14,9 @@ header{
     width: 200px;
 }
 .logoImg{
-    height: 80px;
+    height: 60px;
     width: 80px;
+
 }
 .nome{
     font: 40px arial white;
@@ -25,14 +26,15 @@ header{
     color: white;
     width: 50px;
     height: 50px;
-    margin-left: 600px;
+    display: flex;
+    align-items: center;
 }
 .btnReturn{
     margin: 10px;
     margin-left: 20px;
     height: 30px;
     width: 30px;
-    
+
 }
 .ri-reply-line{
     color: #e3762b;
@@ -42,13 +44,10 @@ header{
     width: 600px;
     max-height: 510px;
     float: left;
-    margin: 20px;
-    margin-left: 40px;
+    position: static;
+    margin-left: 30px;
     border: 2px solid #e3762b;
     border-radius: 20px;
-}
-.tytle{
-    text-align: center;
 }
 .carrinho{
     color:#e3762b;
@@ -72,7 +71,7 @@ header{
     margin: 0;
     padding: 0;
   }
-  
+
   .cards_item {
     float: left;
     padding: 0.8rem;
@@ -82,12 +81,12 @@ header{
     transition: 0.5s;
     color: #e3762b;
   }
-  
+
   .cards_item:hover {
     transform: scale(1.1);
     z-index: 2;
   }
-  
+
   .card {
     background-color: white;
     border-radius: 1rem;
@@ -96,12 +95,12 @@ header{
     flex-direction: column;
     overflow: hidden;
   }
-  
+
   .card_content {
     padding: 0.8rem;
     background: #CFD8DC;
   }
-  
+
   .card_title {
     color: #ffffff;
     font-size: 1.1rem;
@@ -120,4 +119,11 @@ header{
     margin-bottom: 1.25rem;
     font-weight: 400;
   }
-  
+  .tytle{
+    text-align: center;
+    color: #060606;
+}
+.descProd{
+    margin-top: 90px;
+    color:#282828;
+}

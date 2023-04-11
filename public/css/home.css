@@ -2,11 +2,11 @@
     margin: 0px;
     padding: 0px;
   }
-  
+
   .pesquisa{
     float:right;
     margin-right: 180px;
-    
+
   }
   .logoImg{
     height: 60px;
@@ -20,7 +20,7 @@
   .lupaImg{
     width: 20px;
     height: 20px;
-    
+
   }
   .navbar{
     text-align: center;
@@ -33,7 +33,7 @@
   .nome{
     font: 40px arial white;
   }
-  
+
   #menu__toggle {
     opacity: 0;
   }
@@ -105,7 +105,7 @@
   .menu__item:hover {
     background-color: #CFD8DC;
   }
-  
+
   *{
     padding: 0;
     margin: 0;
@@ -114,19 +114,19 @@
     font-family: 'Poppins', sans-serif;
     font-family: 'Space Mono', monospace;
   }
-  
+
   /* Cores do navbar editar para o padrão do PI & E-commerce*/
   :root{
     --text-color: #CFD8DC;
     --main-color: #e3762b;
   }
-  
+
   body{
     min-height: 100vh;
     background: var(--bg-color);
     color:var(--text-color);
   }
-  
+
   /* Configuraçoes do header */
   header{
     position: fixed;
@@ -142,35 +142,35 @@
     padding: 28px 12%;
     transition: all .50s ease;
   }
-  
+
   /* Posição da logo */
-  
-  
+
+
   .logo{
     display: flex;
     align-items: center;
   }
-  
+
   /*Logo ICON editar aqui*/
   .logo i{
     color: var(--main-color);
     font-size: 28px;
     margin-right: 3px;
   }
-  
+
   /*TEXT da logo editar aqui*/
   .logo span{
     color: var(--text-color);
     font-size: 1.7rem;
     font-weight: 600;
   }
-  
+
   .navbar{
     display: flex;
     /* remove os pontos da lista não ordenada */
     list-style: none;
   }
-  
+
   .navbar a{
     color: var(--text-color);
     font-size: 1.1rem;
@@ -179,20 +179,20 @@
     margin: 0px 30px;
     transition: all .50s ease;
   }
-  
+
   .navbar a:hover{
     color: var(--main-color);
   }
-  
+
   .navbar a.active{
     color: var(--main-color);
   }
-  
+
   .main{
     display: flex;
     align-items: center;
   }
-  
+
   .main a{
     margin-right: 25px;
     margin-left: 10px;
@@ -201,22 +201,22 @@
     font-weight: 500;
     transition: all .50s ease;
   }
-  
+
   .user{
     display: flex;
     align-items: center;
   }
-  
+
   .user i{
     color: var(--main-color);
     font-size: 28px;
     margin-right: 7px;
   }
-  
+
   .main a:hover{
     color: var(--main-color);
   }
-  
+
   #menu-icon{
     font-size: 35px;
     color:var(--text-color);
@@ -224,7 +224,7 @@
     z-index: 10001;
     display: none;
   }
-  
+
     /* Codigo responsivo */
   @media (max-width:1280px){
     header{
@@ -236,7 +236,7 @@
         margin: 0px 20px;
     }
   }
-  
+
   @media (max-width: 1090px){
     #menu-icon{
         display: block;
@@ -254,35 +254,48 @@
         border-radius: 10px;
         transition: all .50s ease;
     }
-  
+
     .navbar a{
         display: block;
         margin: 12px 0;
         padding: 0px 25px;
         transition: all .50s ease;
     }
-  
+
     .navbar a:hover{
         color: var(--text-color);
         transform: translateY(5px);
     }
-  
+
     .navbar a.active{
         color: var(--text-color);
     }
-    
+
     .navbar.open{
         right: 2%;
     }
   }
-  
+
   header{
     height: 50px;
     background-color: #18171d;
     border-bottom: 2px solid #e3762b;
     color: #CFD8DC;
   }
-  
+
   .carousel-inner{
     height: 500px;
   }
+.AlertProduto{
+    background-color: #18171d;
+    color: #e3762b;
+    border-top: 3px solid #e3762b;
+    border-bottom: 3px solid #e3762b;
+}
+.foot{
+    background-image: linear-gradient(#18171d,black);
+    border-bottom: 3px solid #e3762b;
+    border-top: 2px solid #e3762b;
+    width: 100%;
+    margin-top: 25%;
+}
