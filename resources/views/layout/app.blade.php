@@ -42,9 +42,7 @@
           <button class="btn btn-outline-success" type="submit"><i class="ri-search-fill"></i></button>
         </form>
         <div class="main">
-            <a href="#" class="user"><i class="ri-user-fill"></i>Sing In</a>
-            <a href="#">Registrar</a>
-            <div class="bx bx-menu" id="menu-icon"></div>
+            <a href="#" class="user"><i class="ri-user-fill"></i></a>
         </div>
     </header>
 

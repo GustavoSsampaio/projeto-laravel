@@ -1,4 +1,21 @@
-<x-guest-layout>
+<!--                                                                           HOMEPAGE                                                                                             -->
+<!--cria uma extensão para puxar o conteudo da pagina layout.app-->
+@extends('layout.app')
+@section('main')
+<style>
+    loginBox{
+        
+        height: 600px;
+        width: 300px;
+        border: 2px solid black;
+        border-radius: 6px;
+    }
+</style>
+<body>
+<div class="loginBox">
+    <h1>Login</h1>
+    <p>Entre com sua conta existente</p>
+
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -44,4 +61,7 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+
+</body>
+<!--finaliza com footer-->
+@endsection
