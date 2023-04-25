@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\ProdutoController;
-
+use App\http\Controllers\CarrinhoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,16 +17,23 @@ use App\http\Controllers\ProdutoController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 
 
-Route:: get('/produto', [ProdutoController::class, 'index']);
-// Route:: get('/produto/{id}', [ProdutoController::class, 'show']);
+
+Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
+Route::get('/carrinho/{produto}', [CarrinhoController::class, 'store']);
+
+
+
+Route::get('/produto', [ProdutoController::class, 'index']);
+// Route::get('/produto/{id}', [ProdutoController::class, 'show']);
+
 Route::get('/produto/{produto}',[ProdutoController::class,'show'])->name('produto.show');//aqui , no servidor, será produto/1
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect(route('home'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

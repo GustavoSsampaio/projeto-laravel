@@ -1,11 +1,12 @@
 <!--                                                                           HOMEPAGE                                                                                             -->
 <!--cria uma extensão para puxar o conteudo da pagina layout.app-->
-@extends('layout.app')
+@extends('layout.acesso')
 @section('main')
 <div class="loginBox">
+
     <h1>Cadastro</h1>
     <p>Crie sua nova conta</p>
-<x-guest-layout>
+
     <form method="POST" action="{{ route('register') }}">
         @csrf
             <!-- Name -->
@@ -16,6 +17,7 @@
         </div>
         <!-- Email Address -->
         <div class="mt-4">
+            
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
@@ -45,11 +47,11 @@
                 {{ __('Already registered?') }}
             </a>
 
-            <x-primary-button class="ml-4">
+            <button class="buttonLog">
                 {{ __('Register') }}
-            </x-primary-button>
+            </button>
         </div>
     </form>
-</x-guest-layout>
+</div>
 <!--finaliza com footer-->
 @endsection
