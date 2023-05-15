@@ -41,7 +41,8 @@
                 <input type="number" name="qty" id="qty" maxlength="12" value="1" title="Qtd" class="input-text qty" data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}">
                 <br>
                 <br>
-                <button class="carrinho"><i class="ri-shopping-cart-2-line"></i>Adicionar ao carrinho!</button>
+                <!--ADICIONAR FUNÇÃO PARA REQUISIÇÃO DE PRODUTOS ADD AO CARRINHO-->
+                <button  class="carrinho"><i class="ri-shopping-cart-2-line"></i>Adicionar ao carrinho!</button>
     </div>
 </sectio>
 
