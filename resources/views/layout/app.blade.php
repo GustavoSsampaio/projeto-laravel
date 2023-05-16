@@ -42,15 +42,17 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit"><i class="ri-search-fill"></i></button>
         </form>
+
         <div class="main">
             @auth
             <a href="#" class="user"><i class="ri-user-fill"></i>{{Auth::user()->USUARIO_NOME}}</a>
             <a href="/carrinho" class="car"><i class="ri-shopping-cart-fill"></i>Meus Itens</a>
-            @endauth<a href="/login" class="user">
+            @endauth
             @guest
             <a href="/login" class="user"><i class="ri-user-fill"></i>logar</a>
             @endguest
         </div>
+
     </header>
 
     <main>
