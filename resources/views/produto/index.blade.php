@@ -1,3 +1,5 @@
+          <!--MANO DE ONDE É ESSA TELA ?? KKKK -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,7 +23,6 @@
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit"><i class="ri-search-fill"></i></button>
           </form>
-
     </header>
     <main>
         <section>
@@ -70,8 +71,16 @@
                 <input type="number" name="qty" id="qty" maxlength="12" value="1" title="Qtd" class="input-text qty" data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}">
                 <br>
                 <br>
-                <button class="carrinho"><i class="ri-shopping-cart-2-line"></i>Adicionar ao carrinho!</button>
-
+                <!--Adicionar "if" para ver se tá logado, se sim add no carrinho, se n retorna pra pagina de login-->
+                @auth
+                    <button class="carrinho"><i class="ri-shopping-cart-2-line"></i>Adicionar ao carrinho!</button>
+                @endauth
+                @guest
+                    <!--Quando clicar vaipara login-->
+                    <a href="/login"><button class="carrinho"><i class="ri-shopping-cart-2-line"></i>Adicionar ao carrinho!</button></a>
+                @endguest
+                <!--leva para tela de finalizar compra-->
+                <button class="comprar"><i class="ri-shopping-bag-3-fill"></i>Vou levar!</button>
             </div>
         </sectio>
         <section class="maisProd">
