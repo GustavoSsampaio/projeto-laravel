@@ -26,10 +26,7 @@
         </label>
         <ul class="menu__box">
           <li><a class="menu__item" href="http://127.0.0.1:8000/produto/1">Instrumentos</a></li>
-          <li><a class="menu__item" href="#">Som</a></li>
-          <li><a class="menu__item" href="#">itens</a></li>
-          <li><a class="menu__item" href="#">Sobre Nós</a></li>
-          <li><a class="menu__item" href="#">Contatos</a></li>
+          <li><a class="menu__item" href="#contato">Contatos</a></li>
         </ul>
       </div>
 
@@ -60,7 +57,7 @@
     </main>
 
     <footer class="foot">
-            <p>Contatos</p>
+            <p id=#contato>Contatos</p>
                 <ul>
                     <li><i class="ri-whatsapp-fill"></i> (11)93271-2274</li>
                     <li><i class="ri-instagram-line"></i> @Echo_Instrumentos</li>

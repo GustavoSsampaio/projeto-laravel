@@ -6,7 +6,7 @@
   <main>
     <section>
       <div class="produtoImg">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade prim">
             <div class="carousel-inner">
             @if(count($produto->ProdutoImagem) > 0)
 
@@ -73,7 +73,7 @@
         <ul class="cards">
           <li class="cards_item">
             <div class="card">
-              <div class="card_image"><img class="w-50" src="../imagens/510681.PNG">
+              <div class="card_image"><img class="w-50" src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}">
                 <div class="card_content">
                     <h2 class="card_title">Guitarra Yamaha</h2>
                 <p class="card_text">guitarra stratocaster para intermediarios </p>

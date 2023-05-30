@@ -103,7 +103,7 @@
               <div class="card_image"><img class="w-50" src="../imagens/guitarraPreta.jpg"></div>
               <div class="card_content">
                 <h2 class="card_title">Guitarra Yamaha</h2>
-                <p class="card_text">guitarra boa para quem está começando com o instrumento </p>
+                <p class="card_text">Bom para quem está começando com o instrumento </p>
                 <a href="prod2.html" target="_blank"><button class="btn card_btn">Saiba mais</button></a>
               </div>
             </div>
