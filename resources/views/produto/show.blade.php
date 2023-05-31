@@ -53,7 +53,7 @@
                 </form>
                 @endauth
                 @guest
-                    <!--Quando clicar vaipara login-->
+                    <!--Quando clicar vai para login-->
                     <a href="/login"><button class="carrinho"><i class="ri-shopping-cart-2-line"></i>Adicionar ao carrinho!</button></a>
 
                 @endguest

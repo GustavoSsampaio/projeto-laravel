@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 
 Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
-Route::get('/carrinho_', [CarrinhoController::class, 'store']);
+Route::post('/carrinho', [CarrinhoController::class, 'store']);
 Route::post('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
 
 
