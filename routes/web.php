@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\ProdutoController;
 use App\http\Controllers\CarrinhoController;
+use App\Http\Controllers\PedidoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,10 @@ Route::get('/', function () {
 Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
 Route::post('/carrinho', [CarrinhoController::class, 'store']);
 Route::post('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
+
+Route::post('/pedido',[PedidoController::class,'checkout'])->name('pedido.checkout');
+Route::get('/pedido',[PedidoController::class,'index'])->name('pedido.index');
+Route::get('/pedido/{pedido}',[PedidoController::class,'show'])->name('pedido.show');
 
 
 Route::get('/produto', [ProdutoController::class, 'index']);

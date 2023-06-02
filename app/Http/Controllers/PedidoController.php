@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pedido;
 use App\Models\Carrinho;
-use App\Models\PeditoItem;
+use App\Models\PedidoItem;
 use Illuminate\Http\Request;
 use illuminate\Support\Facades\Auth;
 
@@ -32,7 +32,7 @@ class PedidoController extends Controller
         $itens = Carrinho::where([['USUARIO_ID','=', Auth::user()->USUARIO_ID], ['ITEM_QTD', '>', 0]])
                ->get();
                foreach($itens as $item){
-                PeditoItem::create([
+                PedidoItem::create([
                   'PEDIDO_ID' =>$pedido->PEDIDO_ID,
                   'PRODUTO_ID' => $item->PRODUTO_ID,
                   'ITEM_QTD' => $item->ITEM_QTD,
@@ -51,7 +51,7 @@ class PedidoController extends Controller
     }
     public function show(Pedido $pedido){
 
-        $carrinho = PeditoItem::where([['PEDIDO_ID','=', $pedido->PEDIDO_ID]])->get();
+        $carrinho = PedidoItem::where([['PEDIDO_ID','=', $pedido->PEDIDO_ID]])->get();
          return view ('pedido.show', ['pedido' =>$pedido,'carrinho'=>$carrinho]);
 
        }
