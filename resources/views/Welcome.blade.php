@@ -9,8 +9,8 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-  <div class="carousel-inner mx-auto">
-    <div class="carousel-item active bg-dark">
+  <div class="carousel-inner mx-auto bg-dark">
+    <div class="carousel-item active ">
       <img  class="d-block w-90 mx-auto" src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="...">
     </div>
     <div class="carousel-item">
@@ -41,7 +41,7 @@
 <!--Card dos produtos-->
 <div class="row d-flex justify-content-center">
   <!--foreach para puxar o conteudo da pasta app\models e após isso ::all para pegar todo o conteudo da pasta produto, o take(5) para pegar 5 produtos e o "as $produto" para pegar de produto-->
-  @foreach(\App\Models\Produto::all()->take(4) as $produto)
+  @foreach(\App\Models\Produto::all()->take(8) as $produto)
   <div class="col-3 col-md-auto ">
   <div class="card" style="width: 15rem; height: 30rem;">
   <!-- if onde ele vai contar para ver se em $produto->ProdutoImagem há mais de 0 elementos adicionados, se sim ele irá puxar do banco a URL e colocr a imagem no card, e se nao houver, colocará uma imagem genérica-->
