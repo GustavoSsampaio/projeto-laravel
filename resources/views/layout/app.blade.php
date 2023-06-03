@@ -43,7 +43,7 @@
         <div class="main">
             @auth
             <a href="#" class="user"><i class="ri-user-fill"></i>{{Auth::user()->USUARIO_NOME}}</a>
-            <a href="/carrinho" class="car"><i class="ri-shopping-cart-fill"></i>Meus Itens</a>
+            <a href="/carrinho" class="car"><i class="ri-shopping-cart-fill"></i>Meu carrinho</a>
             @endauth
             @guest
             <a href="/login" class="user"><i class="ri-user-fill"></i>logar</a>

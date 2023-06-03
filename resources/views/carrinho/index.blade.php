@@ -1,7 +1,11 @@
 <!--NOSSA TELA DO CARRINHO-->
 
 @extends('layout.app')
-
+<script>
+  function finalizar(){
+    window.alert('Seu pedido foi confrimado!');
+  }
+</script>
 <section class="h-100 h-custom" style="background-color: black;">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -73,8 +77,8 @@
                         ?>
                         <div id="invisivel">
                         @foreach($carrinho as $item)
-                        {{ $desconto+= $item->Produto->PRODUTO_DESCONTO * $item-> ITEM_QTD}}
-
+                        <?php
+ $desconto+= $item->Produto->PRODUTO_DESCONTO * $item-> ITEM_QTD ?>
                         @endforeach
                         </div>
                         <h5>R${{$desconto}}</h5>
@@ -92,7 +96,8 @@
                         <div id="invisivel">
                         @foreach($carrinho as $item)
                           @if($item->ITEM_QTD>0)
-                            {{$preco+=($item->Produto->PRODUTO_PRECO*$item->ITEM_QTD)-$desconto}}
+                          <?php
+                          $preco+=($item->Produto->PRODUTO_PRECO*$item->ITEM_QTD)-$desconto ?>
                           @endif
                         @endforeach
                         </div>
@@ -105,7 +110,7 @@
                      <form action="{{route('pedido.checkout')}}"  method="POST">
                       @csrf
                       <button type="submit" class="btn btn-dark btn-block btn-lg"
-                        data-mdb-ripple-color="dark">Finalizar</button></form>
+                        data-mdb-ripple-color="dark" onclick="finalizar()">Finalizar</button></form>
                 </form>
                     </div>
                   </div>
