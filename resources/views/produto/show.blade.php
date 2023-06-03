@@ -25,19 +25,17 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
-          </div>
-      </div>
+        </div>
+    </div>
 
-    <div class="descProd">
+        <div class="descProd">
                 <h1 class="tytle">{{$produto->PRODUTO_NOME}}</h1>
                 <br>
-                <h2>Descrição: </h2>
-                <p>{{$produto->PRODUTO_DESC}}</p>
-                <h2>Preço: </h2>
-                <p>R${{$produto->PRODUTO_PRECO}}</p>
+                <h2>Descrição: </h2>{{$produto->PRODUTO_DESC}}
+                <h2>Preço: </h2>R${{$produto->PRODUTO_PRECO}}
                 <h2>Desconto: </h2>
                 <p>R${{$produto->PRODUTO_DESCONTO}}</p>
-                <p>Quantidade:</p>
+                <p>Quantidade disponivel:</p>
                 <input type="number" name="qty" id="qty" maxlength="12" value="1" title="Qtd" class="input-text qty" data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}">
                 <br>
                 <br>
@@ -54,14 +52,13 @@
                 @endauth
                 @guest
                     <!--Quando clicar vai para login-->
-                    <a href="/login"><button class="carrinho"><i class="ri-shopping-cart-2-line"></i>Adicionar ao carrinho!</button></a>
+                    <a href="/login"><button class="carrinho"><i class="ri-shopping-cart-2-line"></i>Adicionar ao carrinho</button></a>
 
                 @endguest
                 <!--leva para tela de finalizar compra-->
                 <a href="/pedido"><button class="comprar"><i class="ri-shopping-bag-3-fill"></i>Vou levar!</button></a>
-            </div>
-    </div>
-</sectio>
+        </div>
+    </section>
 
         <section class="maisProd">
             <div class="AlertProduto">
