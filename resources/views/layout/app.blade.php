@@ -48,7 +48,17 @@
             @guest
             <a href="/login" class="user"><i class="ri-user-fill"></i>logar</a>
             @endguest
+            <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <a class="dropdown-item" href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            sair
+                        </a>
+                    </form>
         </div>
+
 
     </header>
 

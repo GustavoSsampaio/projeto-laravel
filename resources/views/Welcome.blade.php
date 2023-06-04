@@ -45,7 +45,7 @@
   <div class="col-3 col-md-auto ">
   <div class="card" style="width: 15rem; height: 30rem;">
   <!-- if onde ele vai contar para ver se em $produto->ProdutoImagem há mais de 0 elementos adicionados, se sim ele irá puxar do banco a URL e colocr a imagem no card, e se nao houver, colocará uma imagem genérica-->
-    @if(count($produto->ProdutoImagem) > 0)3
+    @if(count($produto->ProdutoImagem) > 0)
       <img class="card-img-top w-auto" src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}">
     @else
       <img class="card-img-top w-auto" src="">

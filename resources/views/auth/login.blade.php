@@ -54,6 +54,8 @@
                 {{ __('Log in') }}
             </button>
         </div>
+        <a href="{{route('register')}}">Cadastre-se</a>
+    
     </form>
 
 </body>
