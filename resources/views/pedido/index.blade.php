@@ -11,7 +11,7 @@
   
 </style>
 <hr size="10">
-<h1 class="fw-bold mb-0 text-black">Pedido de Nº{{$pedido->PEDIDO_ID}}</h1>
+<h1 class="fw mb-0 text-black">Pedido de Nº{{$pedido->PEDIDO_ID}}</h1>
   <h6 class="mb-0 text-muted">Data do pedido:{{$pedido->PEDIDO_DATA}} </h6>
   
 

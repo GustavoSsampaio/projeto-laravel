@@ -43,9 +43,9 @@
                     <form method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
                     @csrf
                     <label for="">Adicionar quantidade:</label><br>
-                    <input type="number" name="ITEM_QTD" min="1" value="ITEM_QTD">
+                    <input type="number" name="ITEM_QTD" min="1" value="1">
 
-                    <button class="carrinho" ><i class="ri-shopping-cart-2-line"></i>Adicionar ao carrinho!</button>
+                    <button class="carrinho" ><i class="ri-shopping-cart-2-line"></i>Adicionar ao carrinho!</button> <br>
                 </form>
                 @endauth
                 @guest
