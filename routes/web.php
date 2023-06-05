@@ -20,9 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-
-
-
 Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
 Route::post('/carrinho', [CarrinhoController::class, 'store']);
 Route::post('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');

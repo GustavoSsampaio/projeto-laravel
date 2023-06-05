@@ -53,8 +53,8 @@
                         <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
 
                         <!--Multiplica valor pela qntdd de itens-->
-                        <?php $valor = $item->Produto->PRODUTO_PRECO * $item-> ITEM_QTD ?>
-                        <h6 class="mb-0">R${{$valor}}</h6>
+
+                        <h6 class="mb-0">R${{$item->Produto->PRODUTO_PRECO * $item-> ITEM_QTD}}</h6>
                         </div>
                         <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                           <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
