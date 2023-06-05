@@ -6,16 +6,16 @@
     window.alert('Seu pedido foi confrimado!');
   }
 </script>
-<section class="h-100 h-custom" style="background-color: black;">
+<section class="h-100 h-custom">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-12">
             <div class="card card-registration card-registration-2" style="border-radius: 15px;">
               <div class="card-body p-0">
                 <div class="row g-0">
-                  <div class="col-lg-8">
+                  <div id="carCard" class="col-lg-8">
                     <div class="p-5">
-                      <div class="d-flex justify-content-between align-items-center mb-5">
+                      <div class="d-flex justify-content-between mb-5">
                         <h1 class="fw-bold mb-0 text-black">Carrinho</h1>
                         <h6 class="mb-0 text-muted"><!--aqui vai a contagem dos itens--> </h6>
                       </div>
@@ -35,28 +35,27 @@
                           <h6 class="text-black mb-0">{{$item->Produto->PRODUTO_DESC}}</h6>
                         </div>
                         <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                          <button class="btn btn-link px-2"
+                          <button id="menosUm"class="btn btn-link"
                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                            <i class="fas fa-minus"></i>
+                            -
                           </button>
 
-                          <input id="form1" min="1" name="quantity" value="{{$item -> ITEM_QTD}}"  type="number"
-                            class="form-control form-control-sm" />
 
-                          <button class="btn btn-link px-2"
+                          <input id="form1" min="1" name="quantity" value="{{$item -> ITEM_QTD}}" type="number"
+                            class="form-control form-control-sm">
+
+
+                          <button id="maisUm"class="btn btn-link"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                            <i class="fas fa-plus"></i>
+                            +
                           </button>
                         </div>
                         <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                        <!--desnecessario-->  
-                        @if($item->ITEM_QTD==1)
-                          <h6 class="mb-0">R${{$item->Produto->PRODUTO_PRECO}}</h6>
-                        
-                          @else
-                          <h6 class="mb-0">{{$item->Produto->PRODUTO_PRECO * $item-> ITEM_QTD}}</h6>
-                          @endif
-                          </div>
+
+                        <!--Multiplica valor pela qntdd de itens-->
+                        <?php $valor = $item->Produto->PRODUTO_PRECO * $item-> ITEM_QTD ?>
+                        <h6 class="mb-0">R${{$valor}}</h6>
+                        </div>
                         <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                           <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
                         </div>
@@ -65,7 +64,7 @@
                     @endif
                   @endforeach
 
-                  <div class="col-lg-4 bg-grey">
+                  <div class="col-lg-6 bg-grey">
                     <div class="p-5">
                       <h3 class="fw-bold mb-5 mt-2 pt-1">Carteira</h3>
                       <hr class="my-4">
@@ -78,7 +77,7 @@
                         <div id="invisivel">
                         @foreach($carrinho as $item)
                         <?php
- $desconto+= $item->Produto->PRODUTO_DESCONTO * $item-> ITEM_QTD ?>
+                        $desconto+= $item->Produto->PRODUTO_DESCONTO * $item-> ITEM_QTD ?>
                         @endforeach
                         </div>
                         <h5>R${{$desconto}}</h5>
@@ -105,7 +104,7 @@
                       </div>
 
                       <div class="d-flex justify-content-between mb-4">
-                      <a href="/"> <h5>Voltar às compras</h5></a>
+                      <a href="/"> <button class="rtrnBtn">Voltar às compras</button></a>
                       </div>
                      <form action="{{route('pedido.checkout')}}"  method="POST">
                       @csrf
