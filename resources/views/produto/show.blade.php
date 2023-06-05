@@ -3,7 +3,7 @@
 @section('main')
 <!--Carrosel de imagens do produto-->
 <link rel="stylesheet" type="text/css" href="/css/produto.css">
-  <main>
+  <main class="mainShow">
     <section>
       <div class="produtoImg">
         <div id="carouselExampleFade" class="carousel slide carousel-fade prim">
@@ -41,7 +41,7 @@
                 <br>
                 <!--é um "if" para ver se tá logado, se sim add no carrinho, se n (else) retorna pra pagina de login-->
                 @auth
-                    <!--ADICIONAR FUNÇÃO PARA REQUISIÇÃO DE PRODUTOS ADD AO CARRINHO-->
+                    <!--ADICIONAR FUNÇÃO PARA REQUISIÇÃO DE PRODUTOS e ADD AO CARRINHO-->
                     <form method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
                     @csrf
                     <label for="">Adicionar quantidade</label>
