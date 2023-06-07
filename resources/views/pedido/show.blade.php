@@ -15,7 +15,7 @@
                       <div class="d-flex justify-content-between align-items-center mb-5">
                         <h6>Obrigado por comprar na nossa loja!!</h6>
                         <br>
-                        <h1 class="fw-bold mb-0 text-black">Numero do Pedido:{{$pedido->PEDIDO_ID}}</h1>
+                        <h1 id="numPedido" class="fw-bold mb-0 text-black">Numero do Pedido:{{$pedido->PEDIDO_ID}}</h1>
                         <h6 class="mb-0 text-muted">Data da compra:{{$pedido->PEDIDO_DATA}}</h6>
                       </div>
                       <hr class="my-4">
@@ -56,7 +56,7 @@
                         </div>
                       </div>
                       <hr class="my-4">
-                    
+
                   @endforeach
 
                   <div class="col-lg-4 bg-grey">
@@ -82,7 +82,7 @@
                             $preco= 0;
                         ?>
                         <div id="invisivel">
-                       
+
                         @foreach($carrinho as $item)
                         @if($item->ITEM_QTD>0)
                           {{$preco+=($item->Produto->PRODUTO_PRECO*$item->ITEM_QTD)-$desconto}}
